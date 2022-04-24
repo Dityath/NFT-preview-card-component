@@ -10,7 +10,10 @@
 	<meta name="description" content="Try using Svelte" />
 </svelte:head>
 
-<img class="img-1" src="images/image-equilibrium.jpg" alt="Equilibrium #3429 Collectible" />
+<div class="img-div">
+	<img class="img-2" src="images/icon-view.svg" alt="" />
+	<img class="img-1" src="images/image-equilibrium.jpg" alt="Equilibrium #3429 Collectible" />
+</div>
 
 <section class="main">
 	<h1>Equilibrium #3429</h1>
@@ -37,6 +40,49 @@
 	.img-1 {
 		width: 100%;
 		border-radius: 1rem;
+		transition: 0.3s;
+	}
+
+	.img-div:hover .img-1 {
+		z-index: 20;
+		cursor: pointer;
+		opacity: 70%;
+	}
+
+	.img-2:hover {
+		cursor: pointer;
+	}
+
+	.img-div:hover .img-2 {
+		opacity: 100%;
+	}
+
+	.img-2 {
+		transition: 0.3s;
+		opacity: 0%;
+		z-index: 30;
+		position: absolute;
+		left: 50%;
+		margin-left: -22px;
+		top: 50%;
+		margin-top: -22px;
+	}
+
+	.img-div {
+		position: relative;
+		background-color: var(--primary-cyan);
+		border-radius: 1.1rem;
+		width: 100%;
+		height: 288px;
+	}
+
+	.main h1 {
+		transition: 0.3s;
+	}
+
+	.main h1:hover {
+		cursor: pointer;
+		color: var(--primary-cyan);
 	}
 
 	.main p {
@@ -83,6 +129,12 @@
 
 	.footer p span {
 		color: white;
+		transition: 0.3s;
+	}
+
+	.footer p span:hover {
+		cursor: pointer;
+		color: var(--primary-cyan);
 	}
 
 	.avatar {

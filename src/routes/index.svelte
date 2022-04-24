@@ -98,15 +98,16 @@
 	}
 
 	.under-main h2 {
-		font-weight: 400;
 		font-size: 18px;
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		font-weight: 400;
 	}
 
 	.under-main .left {
 		color: var(--primary-cyan);
+		font-weight: 600;
 	}
 
 	.under-main .right {

@@ -1,45 +1,41 @@
 <script>
-	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+	import '../style/app.css';
 </script>
 
-<Header />
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
 
 <main>
-	<slot />
+	<div class="main">
+		<div class="container">
+			<slot />
+		</div>
+	</div>
 </main>
 
-<footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-</footer>
-
 <style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
+	.main {
+		font-family: var(--main-font);
 		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
+		height: 97vh;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 40px;
 	}
 
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+	.container {
+		color: white;
+		background-color: var(--neutral-card);
+		width: 18rem;
+		height: 34rem;
+		padding: 1.25rem;
+		border-radius: 1rem;
+		filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 	}
 </style>

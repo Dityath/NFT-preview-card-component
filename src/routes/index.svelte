@@ -3,58 +3,92 @@
 </script>
 
 <script>
-	import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Equilibrium</title>
+	<meta name="description" content="Try using Svelte" />
 </svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
+<img class="img-1" src="images/image-equilibrium.jpg" alt="Equilibrium #3429 Collectible" />
 
-		to your new<br />SvelteKit app
-	</h1>
+<section class="main">
+	<h1>Equilibrium #3429</h1>
+	<p>Our Equilibrium collection promotes balance and calm.</p>
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+	<div class="under-main">
+		<h2 class="left">
+			<img src="images/icon-ethereum.svg" alt="ether icon" />
+			0.041ETH
+		</h2>
+		<h2 class="right">
+			<img src="images/icon-clock.svg" alt="clock icon" />
+			3 days left
+		</h2>
+	</div>
+	<hr class="divider" />
+	<div class="footer">
+		<img class="avatar" src="images/image-avatar.png" alt="avatar" />
+		<p>Creation of <span>Jules Wyvern</span></p>
+	</div>
 </section>
 
 <style>
-	section {
+	.img-1 {
+		width: 100%;
+		border-radius: 1rem;
+	}
+
+	.main p {
+		font-weight: 300;
+		font-size: 18px;
+		color: var(--primary-blue);
+	}
+
+	.under-main {
+		margin-top: 1rem;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
+	}
+
+	.under-main h2 {
+		font-weight: 400;
+		font-size: 18px;
+		display: flex;
 		align-items: center;
-		flex: 1;
+		gap: 0.5rem;
 	}
 
-	h1 {
-		width: 100%;
+	.under-main .left {
+		color: var(--primary-cyan);
 	}
 
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+	.under-main .right {
+		color: var(--primary-blue);
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.divider {
+		border: solid 1px var(--neutral-line);
+	}
+
+	.footer {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+	}
+
+	.footer p {
+		font-weight: 400;
+	}
+
+	.footer p span {
+		color: white;
+	}
+
+	.avatar {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 100%;
+		border: solid 1px white;
 	}
 </style>
